@@ -1,0 +1,27 @@
+ext {
+    supportLibraryVersion = '26.0.2'
+    minSdkVersion = 9
+    targetSdkVersion = 26
+    buildToolsVersion = '26.0.1'
+    versionCode = 1
+    versionName = '0.1.0'
+}
+
+
+buildscript {
+    ext.kotlinVersion = '1.1.4-3'
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.google.com' }
+    }
+}
